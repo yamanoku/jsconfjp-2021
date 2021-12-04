@@ -4,7 +4,7 @@
 この記事はそこで登壇した内容をもとに書き起こした記事です。
 
 ## 発表資料
-[the past and future of accessible front-end development - Speaker Deck](https://speakerdeck.com/yamanoku/the-past-and-future-of-accessible-front-end-development）
+[the past and future of accessible front-end development - Speaker Deck](https://speakerdeck.com/yamanoku/the-past-and-future-of-accessible-front-end-development)
 
 ## TOC
 
