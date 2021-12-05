@@ -13,3 +13,7 @@
 1. [これからのアクセシビリティ対応](contents/03-future-accessible-front-end-development.md)
 1. [期待するアプローチ](contents/04-expected-approach.md)
 1. [おわりに](contents/05-conculusions.md)
+
+## License
+
+[CC BY-NC-SA 4.0](./LICENSE)
