@@ -32,9 +32,64 @@ Adobe が開発するデザインシステムの「React Spectrum」で、UI と
 
 これらのアプローチに共通することは JavaScript に振る舞いを集約させていることです。
 
-コードの例ではこれまで属性や疑似要素のように扱っていた挙動を React Hooks から抽出してスタイルで制御するようにしています。
+以下のコードの例ではこれまで属性や疑似要素のように扱っていた挙動を React Hooks から抽出してスタイルで制御するようにしています。
+
+```javascript
+let { buttonProps, isPressed } = useButton(props, ref);
+let { focusProps, isFocusVisible } = useFocusRing();
+let className = classNames(
+  props.isDisabled ? "bg-gray-400" : isPressed ? "bg-blue-700" : "bg-blue-500",
+  "text-white",
+  "font-bold",
+  "py-2",
+  "px-4",
+  "rounded",
+  "cursor-default",
+  "focus:outline-none",
+  isFocusVisible ? "shadow-outline" : "",
+  "transition",
+  "ease-in-out",
+  "duration-150"
+);
+```
 
 数値入力フィールドもこのように Hooks を使いこなすことで表現可能になっています。個人的な意見となりますが、ここまで多様な考慮がされている input type=“number” は他にはないんじゃないかなと思っています。
+
+```javascript
+function NumberField(props) {
+  let { locale } = useLocale();
+  let state = useNumberFieldState({ ...props, locale });
+  let inputRef = React.useRef();
+  let incrRef = React.useRef();
+  let decRef = React.useRef();
+  let {
+    labelProps,
+    groupProps,
+    inputProps,
+    incrementButtonProps,
+    decrementButtonProps,
+  } = useNumberField(props, state, inputRef);
+  let { buttonProps: incrementProps } = useButton(
+    incrementButtonProps,
+    incrRef
+  );
+  let { buttonProps: decrementProps } = useButton(decrementButtonProps, decRef);
+  return (
+    <div>
+      <label {...labelProps}>{props.label}</label>
+      <div {...groupProps}>
+        <button {...decrementProps} ref={incrRef}>
+          -
+        </button>
+        <input {...inputProps} ref={inputRef} />
+        <button {...incrementProps} ref={decRef}>
+          +
+        </button>
+      </div>
+    </div>
+  );
+}
+```
 
 こうした JavaScript から振る舞いを定義していくことはネイティブでは足りなかったユースケースを創造していくことにもつながります。
 
@@ -46,13 +101,69 @@ JavaScript を用いて読み込ませることで、たとえば toggle-button 
 
 実装としてはコード例にあるとおりで toggle-button という要素を表示できるようになります。
 
+```javascript
+class ToggleButton extends HTMLElement {
+  connectedCallback() {
+    this.setAttribute("role", "button");
+    this.setAttribute("aria-pressed", "false");
+    this.addEventListener("click", togglePressed);
+    this.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === "Space") {
+       togglePressed();
+      }
+    });
+  }
+}
+
+customElements.define("toggle-button", ToggleButton);
+```
+
 ですが、この手法での欠点として DOM に WAI-ARIA 属性が露出してしまう問題があります。デフォルトで暗黙のセマンティクスがある button といった純粋な HTML 要素にはこういったものは現れません。
+
+```html
+<toggle-button role="button" aria-pressed="false">
+  Toggle
+</toggle-button>
+
+<button>
+  Default Button
+</button>
+```
 
 この欠点を解消する１つの手法として、アクセシビリティのためのユースケースとして開発されている Accessibility Object Model 、通称 AOM という JavaScript API でのアプローチがあります。
 
 かつては属性値で設定する必要があったものが、IDL 属性に文字列や真偽値で挿入することができるようになります。つまりこれはアクセシビリティとしての関心事を DOM から分離して管理できるようになります。
 
+```javascript
+class ToggleButton extends HTMLElement {
+  constructor() {
+    super();
+    this._internals = this.attachInternals();
+    this._internals.role = "button";
+    this._internals.ariaPressed = false;
+  }
+}
+
+ToggleButton.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" || event.key === "Space") {
+    toggleButton();
+  }
+});
+
+customElements.define("toggle-button", ToggleButton);
+```
+
 こうすることで toggle-button に暗黙のセマンティクスを定義できるようになり、DOM 上からはその情報を露呈させなくてもよくなります。
+
+```html
+<toggle-button>
+  Toggle
+</toggle-button>
+
+<button>
+  Default Button
+</button>
+```
 
 このように自分たちで１つずつ定義していくアプローチも存在します。これは自分たちで Web 標準のものを生み出すようなストイックな手法で安易にオススメはできません。ですが、Shadow DOM にスタイルを内包させて、各種フロントエンドフレームワークとも合わせて使えるアプローチでもあります。
 
