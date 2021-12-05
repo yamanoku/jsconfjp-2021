@@ -1,31 +1,31 @@
 # 期待するアプローチ
 
-![Microsoft公式サイトからの「Internet Explorer 11 は Internet Explorer の最後のバージョンですか？」セクションの引用](../images/04/image_072.jpeg)
+![Microsoft公式サイトからの「Internet Explorer 11 は Internet Explorer の最後のバージョンですか？」セクションの引用](../images/04/image_001.jpeg)
 
 2021 年ウェブ界隈で大きなニュースでもあった Internet Explorer 11 のサポート終了の発表があり、今後はレガシーブラウザの考慮が減り先進的なウェブ標準による開発機運が高まってきました。
 
 ## HTML による UI 実装の限界
 
-![ブラウザはドキュメントビュワー](../images/04/image_073.jpeg)
+![ブラウザはドキュメントビュワー](../images/04/image_002.jpeg)
 
 ところで先進的なウェブ開発をするにあたり一旦立ち止まって考えてみてほしいことがあります。ブラウザはあくまでもドキュメントビュワーのものであるということです。
 
-![ハイパーテキストとしてのHTML](../images/04/image_074.jpeg)
+![ハイパーテキストとしてのHTML](../images/04/image_003.jpeg)
 
 ポートフォリオサイトやコーポレイトサイト、あるいはサーバーサイドと連携した販売サイトなど。インターネットを通じてそれらの文書を見ることができるようになっています。CSS で色付けされたり JavaScript で動的にすることで印象が離れがちですが、ハイパーテキストシステムのコンテンツのために HTML は存在しています。
 
-![GUI としての HTML ？](../images/04/image_075.jpeg)
+![GUI としての HTML ？](../images/04/image_004.jpeg)
 
 それでは HTML は GUI のための機能を備えていると思えますでしょうか。HTML ５へ進化した中で表現も豊かにインタラクションもですが、アプリケーションのものとして使えるパーツとしてはまだ不十分、満たせていないと思います。多くは CSS や JavaScript と組み合わせてあたかも存在しているような UI と錯覚してるにすぎません。
 
-![「HTML だけで UI を作る限界、あるいは無理なくユースケースと向き合っていくためには」発表タイトルのスライド](../images/04/image_076.jpeg)
+![「HTML だけで UI を作る限界、あるいは無理なくユースケースと向き合っていくためには」発表タイトルのスライド](../images/04/image_005.jpeg)
 
 以前私は「HTML だけで UI を作る限界」と題した、ユーザの要求が変化していく中、その複雑さを受け入れるアプリケーションをつくるために、今ある HTML を使い続けるのは限界があるのではないか、といった内容を発表しました。
 そんな中で私がまさに、という期待しうるアプローチが今年になって発表されていました。
 
 ## React GUI
 
-![React GUI](../images/04/image_078.jpeg)
+![React GUI](../images/04/image_006.jpeg)
 
 Normalize.css 作者でもある Nicolas により発表された React GUI です。
 
@@ -36,12 +36,12 @@ React GUI をプロダクションコードで使用している例はまだ見�
 
 次は「デザインシステム」という考え方から着想を得た２つのアプローチについて紹介します。
 
-![Headless UI](../images/04/image_081.jpeg)
+![Headless UI](../images/04/image_007.jpeg)
 
 １つは Headless UI です。
 これはスタイルを考慮していないコンポーネントでざっくりというと挙動のみが提供されているものです。スタイルは TailwindCSS など別に付与することができます。React.js と Vue3 向けに提供されています。
 
-![React Aria](../images/04/image_083.jpeg)
+![React Aria](../images/04/image_008.jpeg)
 
 もう１つは React Aria です。
 Adobe が開発するデザインシステムの「React Spectrum」で、UI としての挙動やアクセシビリティ実装を React Hooks で分離して管理できるようになっています。こちらは React.js のみの対応になっています。
@@ -113,7 +113,7 @@ function NumberField(props) {
 
 HTML にはなかったものをつくる、という観点では Web Components の要素でもある Custom Elements も挙げられます。
 
-![<toggle-button />](../images/04/image_090.jpeg)
+![<toggle-button />](../images/04/image_009.jpeg)
 
 JavaScript を用いて読み込ませることで、たとえば toggle-button という HTML 上には存在しない Custom Elements を存在させることができます。
 
@@ -148,7 +148,7 @@ customElements.define("toggle-button", ToggleButton);
 </button>
 ```
 
-![Accessibility Object Model](../images/04/image_093.jpeg)
+![Accessibility Object Model](../images/04/image_010.jpeg)
 
 この欠点を解消する１つの手法として、アクセシビリティのためのユースケースとして開発されている Accessibility Object Model 、通称 AOM という JavaScript API でのアプローチがあります。
 
@@ -189,10 +189,10 @@ customElements.define("toggle-button", ToggleButton);
 
 ---
 
-![制約があるため銀の弾丸ではない](../images/04/image_097.jpeg)
+![制約があるため銀の弾丸ではない](../images/04/image_011.jpeg)
 
 以上いくつかのアプローチを紹介させていただきましたが、これらのアプローチはプロダクトレディではなかったり、フレームワーク固定であったり、AOM はすべてのブラウザで安定して使用できるものでもないため、銀の弾丸となるものではないのは注意いただければと思います。
 
-![状況やユースケースに合わせて活用できるように](../images/04/image_099.jpeg)
+![状況やユースケースに合わせて活用できるように](../images/04/image_012.jpeg)
 
 しかしながら、これまでのアクセシビリティを考慮するフロントエンド開発とは違って、責務を分割して柔軟に扱えるようにするアプローチであることは変わりないので、今後もこれらの動向を追いつつ、各開発状況やプロダクトのユースケースに合わせて活用できるようにしていきたいですね。
