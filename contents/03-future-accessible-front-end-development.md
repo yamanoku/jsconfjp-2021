@@ -46,23 +46,85 @@
 そんな ARIA ライブリージョンについて各フロントエンドフレームワークでどう対応できているかを紹介してみます（2021年11月27日登壇時点での内容）。
 
 まずは Next.js の場合。
-RouteAnnouncer という形で提供されており、ページ変更の通知をすることができます。
+
+```javascript
+const { asPath } = useRouter();
+const [routeAnnouncement, setRouteAnnouncement] = React.useState("");
+const initialPathLoaded = React.useRef(false);
+React.useEffect(() => {
+  if (!initialPathLoaded.current) {
+    initialPathLoaded.current = true;
+    return;
+  }
+  if (document.title) {
+    setRouteAnnouncement(document.title);
+  } else {
+    const pageHeader = document.querySelector("h1");
+    const content = pageHeader?.innerText ?? pageHeader?.textContent;
+    setRouteAnnouncement(content || asPath);
+  }
+}, [asPath]);
+```
+
+`RouteAnnouncer` という形で提供されており、ページ変更の通知をすることができます。
 最近までは先に大見出しを確認する形だったのですが、title を読み上げるように修正されて canary ブランチにマージされました。
 
-実は RouteAnnouncer は GatsbyJS で先に策定されたもので、かつて @reach/router で実装されていたのですが問題があったため変更されたものになります。
+実は `RouteAnnouncer` は GatsbyJS で先に策定されたもので、かつて [@reach/router](https://reach.tech/router/) で実装されていたのですが問題があったため変更されたものになります。
 ちなみに GatsbyJS は React.js のフレームワークの中でもアクセシビリティを推しているフレームワークでもあったりします。
 
 続いて Svelte アプリケーションフレームワークの SveltKit について。
-こちらも GatsbyJS の RouteAnnouncer から着想を得た svelte-announcer というものが実装されています。
+
+```html
+{#if mounted}
+<div id="svelte-announcer" aria-live="assertive" aria-atomic="true">
+  {#if navigated} {title} {/if}
+</div>
+{/if}
+```
+
+こちらも GatsbyJS の `RouteAnnouncer` から着想を得た `svelte-announcer` というものが実装されています。
 かつては「ナビゲート」という接頭辞が付けられていましたが、今は削除されています。
 
 次は Angular について。
+
+```html
+<div *ngIf="title$ | async as title" aria-live="polite">
+  <span [attr.aria-label]="title"></span>
+</div>
+```
+
 app.component.html 上に AsyncPipe を用いることで title 情報を ARIA ライブリージョンにより伝播することが可能になります。
 コード上では aria-label で title が伝わるようになっていますが、視覚的にだけ隠す手段を用いてみても良さそうです。
+
+```javascript
+@Component({
+  selector: "app-component"
+  providers: [LiveAnnouncer]
+})
+export class AppComponent {
+ constructor(liveAnnouncer: LiveAnnouncer) {
+   liveAnnouncer.announce("live region!");
+  }
+}
+```
 
 また、@angular/cdk/a11y の中には LiveAnnouncer というものもありこちらでも読み上げ対応ができそうです。
 
 最後に Vue.js に関して。
+
+```javascript
+{
+  name: 'home',
+  path: '/',
+  component: Home,
+  meta: {
+    announcer: { // vue-announcer settings
+      message: 'ホーム画面'
+    }
+  }
+}
+```
+
 vue-announcer というライブラリを使用する形で vue-router と組み合わせて使うことができます。設定で skip することもできたり、読み込み後に文字を追加することもできます。
 
 それでは実際に修正を行ったものを見てみましょう。
@@ -75,4 +137,4 @@ vue-announcer というライブラリを使用する形で vue-router と組み
 
 通知は都度ユーザに伝えるようにしてしまうとユーザ体験を損ねます。これはページ遷移だけではなくあらゆる通知についても同様です。
 
-一から実装する際には動作が完了してから読み上げてくれる aria-live=“polite” で基本行うようにして、緊急性の高いものは assertive や role=“alert” などで通知するようにしましょう。
+一から実装する際には動作が完了してから読み上げてくれる `aria-live=“polite”` で基本行うようにして、緊急性の高いものは `assertive` や `role=“alert”` などで通知するようにしましょう。
