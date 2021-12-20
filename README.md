@@ -3,6 +3,9 @@
 2021年11月27日に開催された [JSConfJP 2021](https://jsconf.jp/2021/) にて登壇してきました。
 この記事はそこで登壇した内容をもとに書き起こした記事です。
 
+## YouTube
+[アクセシブルなフロントエンド開発のこれまでとこれから - YouTube](https://www.youtube.com/watch?v=58TkWIsH20E)
+
 ## 発表資料
 [the past and future of accessible front-end development - Speaker Deck](https://speakerdeck.com/yamanoku/the-past-and-future-of-accessible-front-end-development)
 
