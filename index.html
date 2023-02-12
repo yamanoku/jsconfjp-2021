@@ -21,55 +21,55 @@
       <body>
         <main id="main">
           <h1><span style="word-break: keep-all; overflow-wrap: break-word;">アクセシブルな<wbr>フロントエンド開発の<wbr>これまで<wbr>と<wbr>これから</span></h1>
-          <p><img src="../images/top.jpeg" alt="サムネイル：アクセシブルなフロントエンド開発のこれまでとこれから"></p>
+          <p><img src="images/top.jpeg" alt="サムネイル：アクセシブルなフロントエンド開発のこれまでとこれから"></p>
 <p>2021年11月27日に開催された <a href="https://jsconf.jp/2021/" target="_blank" rel="noopener">JS ConfJP 2021</a> にて登壇してきました。このページはそこで登壇した内容をもとに書き起こした記事です。</p>
 <h2>アクセシビリティとは何か</h2>
-<p><img src="../images/01/image_001.jpeg" alt="アクセシビリティ"></p>
+<p><img src="images/01/image_001.jpeg" alt="アクセシビリティ"></p>
 <p>フロントエンド開発をしている人であれば「アクセシビリティ」という言葉は耳にしたことがあると思います。</p>
 <p>では、アクセシビリティとは一体何を意味する言葉なのでしょう。</p>
-<p><img src="../images/01/image_002.jpeg" alt="あらゆる人がアクセスできるようにする"></p>
+<p><img src="images/01/image_002.jpeg" alt="あらゆる人がアクセスできるようにする"></p>
 <p>アクセシビリティはあらゆる人がアクセスできるようになることを指します。</p>
 <p>アクセスする、というと想像しづらいのですが、なんらかの情報を得られるようになる、とある機器やサービスを利用できるようになると言い換えるとイメージしやすいかもしれません。</p>
-<p><img src="../images/01/image_003.jpeg" alt="ウェブアクセシビリティ"></p>
+<p><img src="images/01/image_003.jpeg" alt="ウェブアクセシビリティ"></p>
 <p>では「ウェブアクセシビリティ」とは何でしょうか。</p>
-<p><img src="../images/01/image_004.jpeg" alt="外務省サイトからの引用文「ホームページを利用している全ての人が、心身の条件や利用する環境に関係なく、ホームページで提供されている情報や機能に支障なくアクセスし、利用できること」"></p>
+<p><img src="images/01/image_004.jpeg" alt="外務省サイトからの引用文「ホームページを利用している全ての人が、心身の条件や利用する環境に関係なく、ホームページで提供されている情報や機能に支障なくアクセスし、利用できること」"></p>
 <p>外務省の定義として <em>「ホームページを利用している全ての人が、心身の条件や利用する環境に関係なく、ホームページで提供されている情報や機能に支障なくアクセスし、利用できること」</em> と書かれています。</p>
 <p>ホームページというと個人のウェブサイトがイメージするかもしれませんが、ウェブブラウザ上で表示できるページのことを指していると解釈しています。</p>
-<p><img src="../images/01/image_005.jpeg" alt="Press Release: W3C Launches International Program Office for WAI より引用「The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.」"></p>
+<p><img src="images/01/image_005.jpeg" alt="Press Release: W3C Launches International Program Office for WAI より引用「The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.」"></p>
 <p>そもそもウェブとアクセシビリティはどういう関係があるのでしょうか。</p>
 <p>ウェブの概念を提唱したティム・バーナーズ＝リー氏は <em>「ウェブのパワーは、その普遍性にある。障害の有無に関係なく、誰もが使えることが、その本質である」</em> と説いています。</p>
-<p><img src="../images/01/image_006.jpeg" alt="ウェブ＝アクセシブル"></p>
+<p><img src="images/01/image_006.jpeg" alt="ウェブ＝アクセシブル"></p>
 <p>つまり、ウェブはもともとアクセシビリティが兼ね揃えたものであり、ウェブ上で仕事をする我々はアクセシビリティを享受・提供できているといっても差し支えありません。</p>
 <p>事実、インターネットの環境が整っていれば「いつでも、どこでも、誰でも」アクセスすることができるのですから。</p>
-<p><img src="../images/01/image_007.jpeg" alt="多層なユーザ層を考慮する"></p>
+<p><img src="images/01/image_007.jpeg" alt="多層なユーザ層を考慮する"></p>
 <p>そんなウェブがもつアクセシビリティを守ることにはどういった恩恵があるでしょうか。
 １つあるのが多様なユーザ層への考慮です。</p>
-<p><img src="../images/01/image_008.jpeg" alt="様々なコンテキストが存在する"></p>
+<p><img src="images/01/image_008.jpeg" alt="様々なコンテキストが存在する"></p>
 <p>かつてはデスクトップだけでウェブに触れていたものが、スマートフォンやタブレットといった機器が増えてきました。</p>
 <p>使用する状況も室内や室外、それぞれでユースケースは異なってきます。なんらかの状況によって操作が容易ではなくなることもあるかもしれません。</p>
 <p>ウェブ標準のものを意識することでアクセシビリティへの考慮コストもいくつか減らすことができます。</p>
-<p><img src="../images/01/image_009.jpeg" alt="アクセスできる層を増やす"></p>
+<p><img src="images/01/image_009.jpeg" alt="アクセスできる層を増やす"></p>
 <p>結果として多くのプロダクトやサービスを使う利用者層も獲得できて、分母の母数を増やすことにも繋がり、ビジネス面において貢献できる期待がもてます。</p>
-<p><img src="../images/01/image_010.jpeg" alt="一人ひとりができるようになる"></p>
+<p><img src="images/01/image_010.jpeg" alt="一人ひとりができるようになる"></p>
 <p>多様なユーザや多様なデバイスでアクセスできるようになるということは、言い換えれば一人ひとりがアクセスできるということでもあります。</p>
-<p><img src="../images/01/image_011.jpeg" alt="根拠のあるデザインをつくる"></p>
+<p><img src="images/01/image_011.jpeg" alt="根拠のあるデザインをつくる"></p>
 <p>デザインの領域でもアクセシビリティの考え方は活用することができます。</p>
 <p>それは、感覚に寄らない「根拠のあるデザイン」をつくることです。</p>
-<p><img src="../images/01/image_012.jpeg" alt="ポートフォリオサイトのデザインにまつわる解説より引用「メインコンテンツの最大幅は80chに設定しています。chはチェーンと呼ばれ、文字のサイズによって可変する単位です。この設定にすることのメリットとして、長文が読めない読字障害の利用者のサポートができたり、文字サイズが大きくなるに従ってテキストの一部が欠けて読めなくなるような事態も発生しにくくなります。」"></p>
+<p><img src="images/01/image_012.jpeg" alt="ポートフォリオサイトのデザインにまつわる解説より引用「メインコンテンツの最大幅は80chに設定しています。chはチェーンと呼ばれ、文字のサイズによって可変する単位です。この設定にすることのメリットとして、長文が読めない読字障害の利用者のサポートができたり、文字サイズが大きくなるに従ってテキストの一部が欠けて読めなくなるような事態も発生しにくくなります。」"></p>
 <p>私の<a href="https://yamanoku.net" target="_blank" rel="noopener">ポートフォリオサイト</a>ではメインコンテンツの最大幅を文字サイズになるように設定しています。</p>
 <p>これは視覚的提示するものをあらゆる人が読みやすくするための考慮のためでもあります。</p>
 <p>アクセシビリティを根拠として設計することで万人にとっても理解しやすいきっかけにもなります。</p>
-<p><img src="../images/01/image_013.jpeg" alt="民間企業への合理的配慮の提供義務"></p>
+<p><img src="images/01/image_013.jpeg" alt="民間企業への合理的配慮の提供義務"></p>
 <p>また、日本とアクセシビリティに関連することとして、今年６月より民間企業への合理的配慮の提供を義務づけるように改正障害者差別解消法が交付されたことがあります。</p>
-<p><img src="../images/01/image_014.jpeg" alt="共同通信の記事より引用「障害がある人の移動や意思疎通を無理のない範囲で支援する「合理的配慮」を企業や店舗などの民間事業者に義務付ける改正障害者差別解消法が28日の参院本会議で全会一致で可決、成立した。」"></p>
+<p><img src="images/01/image_014.jpeg" alt="共同通信の記事より引用「障害がある人の移動や意思疎通を無理のない範囲で支援する「合理的配慮」を企業や店舗などの民間事業者に義務付ける改正障害者差別解消法が28日の参院本会議で全会一致で可決、成立した。」"></p>
 <p><strong>合理的配慮</strong>とは、障害がある人のために負担が重すぎない範囲で社会的にバリアとなっているものを事業者がなくす対応のことです。これまで行政は対応必須となっていましたが、民間でもその対応が努力義務から義務化されました。</p>
-<p><img src="../images/01/image_015.jpeg" alt="内閣府サイトより引用「法は、不特定多数の障害者を主な対象として行われる事前的改善措置（中略）については、個別の場面において、個々の障害者に対して行われる合理的配慮を的確に行うための環境の整備として実施に努めることとしている。」"></p>
+<p><img src="images/01/image_015.jpeg" alt="内閣府サイトより引用「法は、不特定多数の障害者を主な対象として行われる事前的改善措置（中略）については、個別の場面において、個々の障害者に対して行われる合理的配慮を的確に行うための環境の整備として実施に努めることとしている。」"></p>
 <p>そんな中、ウェブアクセシビリティを含む情報アクセシビリティは、合理的配慮を的確に行うための環境の整備と位置づけられており、事前的改善措置として計画的に推進することが求められています。</p>
 <p>サービス上で合理的配慮をするにあたり、だれでも行えるようにするための開発が「環境の整備」とも言えます。</p>
 <p>今後、デジタル庁が主体となって情報アクセシビリティの保証が強くなってといいと感じています。</p>
-<p><img src="../images/01/image_016.jpeg" alt="アクセシビリティ考慮がされていることを知る"></p>
+<p><img src="images/01/image_016.jpeg" alt="アクセシビリティ考慮がされていることを知る"></p>
 <p>ウェブアクセシビリティは環境の整備と紹介しましたが、それらが考慮されているホームページはどういったものがあるか気になるところです。</p>
-<p><img src="../images/01/image_017.jpeg" alt="ウェブアクセシビリティ試験結果（2021年度）東京都 新型コロナウイルス感染症対策サイト"></p>
+<p><img src="images/01/image_017.jpeg" alt="ウェブアクセシビリティ試験結果（2021年度）東京都 新型コロナウイルス感染症対策サイト"></p>
 <p>日本のみなさんであればご存知かもしれない<a href="https://stopcovid19.metro.tokyo.lg.jp/" target="_blank" rel="noopener">東京都新型コロナウイルス感染症対策サイト</a>はアクセシビリティ考慮がされているサイトでもあります。</p>
 <p>行政機関のホームページとして位置づけられているため、比較的厳格な基準でのウェブアクセシビリティの試験が実施され、その試験がパスされて準拠したという結果も発表されています。</p>
 <p>ちなみにこのサイトは <a href="https://nuxtjs.org/" target="_blank" rel="noopener">Nuxt.js</a> で構築されており、<a href="https://jp.vuejs.org/index.html" target="_blank" rel="noopener">Vue.js</a> を使用した日本でもっともアクセシビリティが重視されたサイトと言ってもいいかも知れません。</p>
@@ -82,15 +82,15 @@
 </ul>
 <p>順に説明していきましょう。</p>
 <h3>セマンティックマークアップを忠実に</h3>
-<p><img src="../images/02/image_001.jpeg" alt=""></p>
+<p><img src="images/02/image_001.jpeg" alt=""></p>
 <p><code>div</code> 要素や <code>span</code> 要素といったもので構築するのではなく、ナビゲーションとしてのものは <code>nav</code> 要素を使う、リストアイテム表示するのであれば <code>li</code> 要素を使うといった意味論的要素を扱うことが大事です。</p>
 <p>セマンティックマークアップにおける恩恵は主にマシンリーダブルな点が挙げられます。</p>
 <p>これにより支援技術に伝わるように変換できる、見出しなどはコンテンツ移動するためのインタフェースにもある、ページ検索ランキングの判定にも優位性がある、といったものが挙げられます。</p>
 <p>このように機械側の解釈可能性をあげることは、めぐりめぐって人間にとっても使い勝手が向上するなど恩恵が受けられます。</p>
 <h3>HTML を正しく使う</h3>
-<p><img src="../images/02/image_002.jpeg" alt="HTML を正しく使う"></p>
+<p><img src="images/02/image_002.jpeg" alt="HTML を正しく使う"></p>
 <p>次に HTML を正しく使うことについて。これは前述したセマンティックマークアップにも通じる部分です。</p>
-<p><img src="../images/02/image_003.jpeg" alt="Use button, not div"></p>
+<p><img src="images/02/image_003.jpeg" alt="Use button, not div"></p>
 <p>アクセシビリティ界隈では有名になっている <em>Use button, not div</em> というワードがあります。これはボタンとしての振る舞いがふさわしいときに <code>div</code> 要素ではなく <code>button</code> 要素で実装するほうを選びなさい、という話です。</p>
 <p>ではなぜ <code>button</code> 要素を使うのかというと、HTML 上での意味論的要素でもあるのですが、ウェブブラウザ上で必要となるユースケースを補うことができます。</p>
 <p>たとえばスタイルの定義もユーザエージェントのデフォルトスタイルで補えて、クリック制御やキーボード操作も JavaScript で特段指定しなくてもよくなります。適切なマークアップを提供しないとそうしたデフォルトのユースケースを補えなかったりします。</p>
@@ -98,13 +98,13 @@
 <p>ブラウザの表示においては多少書き方が違ってもある程度補佐してくれたりしますが、静的解析で間違いを減らしていきましょう。</p>
 <p>またスタイルを外したデフォルトの状態でも、意味がきちんと通るようになっているのとより良いでしょう。</p>
 <h3>複雑さは WAI-ARIA で補佐する</h3>
-<p><img src="../images/02/image_004.jpeg" alt="WAI-ARIA"></p>
+<p><img src="images/02/image_004.jpeg" alt="WAI-ARIA"></p>
 <p>HTML だけで完結できるものがあれば良いのですが、複雑な UI をつくるにあたり、 <strong>Web Accessibility Initiative – Accessible Rich Internet Applications</strong>、通称 <strong>WAI-ARIA</strong> を用いる必要もあります。</p>
-<p><img src="../images/02/image_005.jpeg" alt="HTML は DOM ツリーに変換され、ビジュアル UI とアクセシビリティツリーに変換される"></p>
+<p><img src="images/02/image_005.jpeg" alt="HTML は DOM ツリーに変換され、ビジュアル UI とアクセシビリティツリーに変換される"></p>
 <p>支援技術に伝わる一連の流れとして、ブラウザから DOM ツリー・CSSのレンダリングを解析してアクセシビリティに関する情報をもつ アクセシビリティツリーに反映されます。</p>
 <p>そして OS ごとのアクセシビリティ API を通じて支援技術をもってユーザーに情報が届きます。</p>
 <p>WAI-ARIA は アクセシビリティツリーで認知できるように意味づけしてあげるという形です。</p>
-<p><img src="../images/02/image_006.jpeg" alt="タブボタンとタブコンテンツの挙動を撮った動画のスクリーンショット"></p>
+<p><img src="images/02/image_006.jpeg" alt="タブボタンとタブコンテンツの挙動を撮った動画のスクリーンショット"></p>
 <p>元はただのボタンとコンテンツだけだったものも、タブとそれに付随するタブパネルとして支援技術に通知することができます。これが WAI-ARIA がもつ役割です。</p>
 <pre><code class="language-html">&lt;div class=&quot;tabs&quot;&gt;
   &lt;div role=&quot;tablist&quot; aria-label=&quot;Entertainment&quot;&gt;
@@ -166,7 +166,7 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<p><img src="../images/02/image_007.jpeg" alt="WAI-ARIA Authoring Practices 1.1 からの引用 No ARIA is better than Bad ARIA"></p>
+<p><img src="images/02/image_007.jpeg" alt="WAI-ARIA Authoring Practices 1.1 からの引用 No ARIA is better than Bad ARIA"></p>
 <p>ただし WAI-ARIA の誤った使用は逆にアクセシビリティを損なうことにも繋がります。</p>
 <p>仕様では <strong>「ARIA無しのほうが、悪いARIAよりも良い」</strong> とも言われており、間違った使い方をしていないか WAI-ARIA の仕様を参照することを忘れないようにしましょう。</p>
 <h2>これからのアクセシビリティ対応</h2>
@@ -174,41 +174,41 @@
 <p>それを踏まえた上で気をつけていきたいことを紹介できればと思います。</p>
 <h3>UI の操作をできるようにする</h3>
 <p>ウェブブラウザ上でアプリケーションの操作が増えてきたことで UI に対しての制御管理も必要な事項になってきました。</p>
-<p><img src="../images/03/image_001.jpeg" alt="フォーカスマネジメント"></p>
+<p><img src="images/03/image_001.jpeg" alt="フォーカスマネジメント"></p>
 <p>たとえばフォーカスマネジメント。これはキーボード操作する上で注意すべき点になります。</p>
-<p><img src="../images/03/image_002.jpeg" alt="Tab Focus"></p>
+<p><img src="images/03/image_002.jpeg" alt="Tab Focus"></p>
 <p>入力欄やボタンなどのフォーカスアウトラインを見えるようにするという前提がありますが、フォーカス順序が提供されているコンテンツの並びになっているかも気をつけたいところです。</p>
-<p><img src="../images/03/image_003.jpeg" alt="モーダルにおけるフォーカルトラップ動画のスクリーンショット"></p>
+<p><img src="images/03/image_003.jpeg" alt="モーダルにおけるフォーカルトラップ動画のスクリーンショット"></p>
 <p>フォーカスマネジメントを考える上で「フォーカストラップ」という手法があります。これはフォーカスをとある領域からはみ出さないようにするものです。</p>
 <p>フォーカス可能要素を抽出してその中をループするように実装することで実現できますが、URL バーのフォーカス移動が効かなくなる場合もあるので考慮もしておきたいところです。</p>
-<p><img src="../images/03/image_004.jpeg" alt="Firefox 開発者ツールのタブフォーカス順表示でクラウドワークスのログイン画面でフォーカスが表示されている"></p>
+<p><img src="images/03/image_004.jpeg" alt="Firefox 開発者ツールのタブフォーカス順表示でクラウドワークスのログイン画面でフォーカスが表示されている"></p>
 <p>ちなみに Firefox の開発者ツールにあるアクセシビリティタブよりタブ順序を表示するという機能があります。</p>
 <p>これによりフォームの入力箇所やボタンなどのフォーカス順を確認することができるので、おかしな順序になっていないかも確認することができます。</p>
 <h3>Sigle Page Application での留意</h3>
-<p><img src="../images/03/image_005.jpeg" alt="Sigle Page Application"></p>
+<p><img src="images/03/image_005.jpeg" alt="Sigle Page Application"></p>
 <p>近年の Web アプリケーションの開発技術に <strong>Single Page Application</strong>、通称 <strong>SPA</strong> というアプリケーションの考え方が生まれました。</p>
 <p>これは単一のウェブ文書のみを読み込み、サーバーから逐一読み込ませず JavaScript と Web API を用いて体験を向上させるアプリケーション開発です。</p>
-<p><img src="../images/03/image_006.jpeg" alt="フロントエンド側で状態を管理する"></p>
+<p><img src="images/03/image_006.jpeg" alt="フロントエンド側で状態を管理する"></p>
 <p>かつてはページに必要な情報はサーバーサイド側に持たせて、必要に応じてサーバーとのやりとりをするものでしたが、フロントエンド側、つまりはブラウザ側だけでページにある状態を保持したり変化させることを担うことができるようになったとも言えます。</p>
-<p><img src="../images/03/image_007.jpeg" alt="ページにある状態を変化させる"></p>
+<p><img src="images/03/image_007.jpeg" alt="ページにある状態を変化させる"></p>
 <p>それでは「ページにある状態を変化させる」とは一体何かを説明したいと思います。</p>
 <p>実際に動作するものを御覧ください。</p>
-<p><img src="../images/03/image_008.jpeg" alt="ルーターによりページ表示が切り替わっている動画のスクリーンショット"></p>
+<p><img src="images/03/image_008.jpeg" alt="ルーターによりページ表示が切り替わっている動画のスクリーンショット"></p>
 <p>こちらは一見何の変哲もないページ遷移ですが、ルーターという技術を使って１ページ内なのにあたかも他のページに移動しているように見せる手段です。</p>
 <p>見る分には特に違和感もないように見えます。</p>
 <p>それでは、この内容をスクリーンリーダーという読み上げ機能で確認してみます。</p>
-<p><video src="../videos/voice-over-sample-01.mp4" controls style="width: 100%; border: 1px solid var(--y-image-border-color);"></video></p>
+<p><video src="videos/voice-over-sample-01.mp4" controls style="width: 100%; border: 1px solid var(--y-image-border-color);"></video></p>
 <p>おや、これでおしまいでしょうか。もう一度確認してみましょう。</p>
-<p><video src="../videos/voice-over-sample-02.mp4" controls style="width: 100%; border: 1px solid var(--y-image-border-color);"></video></p>
+<p><video src="videos/voice-over-sample-02.mp4" controls style="width: 100%; border: 1px solid var(--y-image-border-color);"></video></p>
 <p>２度見てみましたが、ページの内容が変わっていることは何も伝わっていないようです。</p>
 <p>これはスクリーンリーダー自体の問題ではなく、変化していることを適切に伝えていないために起きる問題です。</p>
 <p>こういった事象では視覚的には問題なく見えていても支援技術にそれらを伝える手段がないため、一部のユーザーにとっては情報のギャップを生みかねないものになります。</p>
 <p>それではどう解決していけばよいのでしょうか。</p>
 <h3>ARIA ライブリージョンという手法</h3>
-<p><img src="../images/03/image_011.jpeg" alt="ARIA ライブリージョン"></p>
+<p><img src="images/03/image_011.jpeg" alt="ARIA ライブリージョン"></p>
 <p>その解決する手段の１つとして ARIA ライブリージョンというものがあります。これはページ上にある変更を支援技術に通知するようにできる WAI-ARIA の１つで、先程の情報のギャップを埋めるに最適なものです。</p>
 <p>そんな ARIA ライブリージョンについて各フロントエンドフレームワークでどう対応できているかを紹介してみます（注：2021 年 11 月 27 日登壇時点での内容）。</p>
-<p><img src="../images/03/image_012.jpeg" alt="Next.js"></p>
+<p><img src="images/03/image_012.jpeg" alt="Next.js"></p>
 <p>まずは <a href="https://nextjs.org/" target="_blank" rel="noopener">Next.js</a> の場合。</p>
 <pre><code class="language-javascript">const { asPath } = useRouter();
 const [routeAnnouncement, setRouteAnnouncement] = React.useState(&quot;&quot;);
@@ -229,10 +229,10 @@ React.useEffect(() =&gt; {
 </code></pre>
 <p><code>RouteAnnouncer</code> という形で提供されており、ページ変更の通知をすることができます。</p>
 <p>最近までは先に大見出しを確認する形だったのですが、<code>&lt;title&gt;</code> を読み上げるように修正されて canary ブランチにマージされました。</p>
-<p><img src="../images/03/image_013.jpeg" alt="GatsbyJS"></p>
+<p><img src="images/03/image_013.jpeg" alt="GatsbyJS"></p>
 <p>実は <code>RouteAnnouncer</code> は <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener">GatsbyJS</a> で先に策定されたもので、かつて <a href="https://reach.tech/router/" target="_blank" rel="noopener">@reach/router</a> で実装されていたのですが問題があったため変更されたものになります。</p>
 <p>ちなみに GatsbyJS は React.js のフレームワークの中でもアクセシビリティを推しているフレームワークでもあったりします。</p>
-<p><img src="../images/03/image_014.jpeg" alt="SvelteKit"></p>
+<p><img src="images/03/image_014.jpeg" alt="SvelteKit"></p>
 <p>続いて Svelte アプリケーションフレームワークの <a href="https://kit.svelte.dev/" target="_blank" rel="noopener">SvelteKit</a> について。</p>
 <pre><code class="language-html">{#if mounted}
 &lt;div id=&quot;svelte-announcer&quot; aria-live=&quot;assertive&quot; aria-atomic=&quot;true&quot;&gt;
@@ -242,7 +242,7 @@ React.useEffect(() =&gt; {
 </code></pre>
 <p>こちらも GatsbyJS の <code>RouteAnnouncer</code> から着想を得た <code>svelte-announcer</code> というものが実装されています。</p>
 <p>かつては「ナビゲート」という接頭辞が付けられていましたが、今は削除されています。</p>
-<p><img src="../images/03/image_015.jpeg" alt="Angular"></p>
+<p><img src="images/03/image_015.jpeg" alt="Angular"></p>
 <p>次は <a href="https://angular.io/" target="_blank" rel="noopener">Angular</a> について。</p>
 <pre><code class="language-html">&lt;div *ngIf=&quot;title$ | async as title&quot; aria-live=&quot;polite&quot;&gt;
   &lt;span [attr.aria-label]=&quot;title&quot;&gt;&lt;/span&gt;
@@ -261,7 +261,7 @@ export class AppComponent {
 }
 </code></pre>
 <p>また、<a href="https://material.angular.io/cdk/a11y/api" target="_blank" rel="noopener">@angular/cdk/a11y</a> の中には <code>LiveAnnouncer</code> というものもありこちらでも読み上げ対応ができそうです。</p>
-<p><img src="../images/03/image_016.jpeg" alt="Vue.js"></p>
+<p><img src="images/03/image_016.jpeg" alt="Vue.js"></p>
 <p>最後に <a href="https://vuejs.org/index.html" target="_blank" rel="noopener">Vue.js</a> に関して。</p>
 <pre><code class="language-javascript">{
   name: 'home',
@@ -276,42 +276,42 @@ export class AppComponent {
 </code></pre>
 <p><a href="https://github.com/vue-a11y/vue-announcer/tree/5c43a479dd0b390a4c4a0b7ade285128efa7c6af" target="_blank" rel="noopener">vue-announcer</a> というライブラリを使用する形で <a href="https://router.vuejs.org/" target="_blank" rel="noopener">vue-router</a> と組み合わせて使うことができます。設定で <code>skip</code> にすることもできたり、読み込み後に文字を追加することもできます。</p>
 <p>それでは実際に修正を行ったものを見てみましょう。</p>
-<p><video src="../videos/voice-over-sample-03.mp4" controls style="width: 100%; border: 1px solid var(--y-image-border-color);"></video></p>
+<p><video src="videos/voice-over-sample-03.mp4" controls style="width: 100%; border: 1px solid var(--y-image-border-color);"></video></p>
 <p>これで通知することができました。</p>
 <p>ページ遷移のほかフォームのアラートだったりトースト UI のような動的に変化させるものがあれば、支援技術にも通知できているかを意識してみるといいでしょう。</p>
 <h3>通知における留意点</h3>
-<p><img src="../images/03/image_018.jpeg" alt="留意すること"></p>
+<p><img src="images/03/image_018.jpeg" alt="留意すること"></p>
 <p>状態を通知する方法について紹介しましたが、通知に関する留意点についても学びましょう。</p>
 <p>通知は都度ユーザに伝えるようにしてしまうとユーザ体験を損ねます。これはページ遷移だけではなくあらゆる通知についても同様です。</p>
 <p>一から実装する際には動作が完了してから読み上げてくれる <code>aria-live=“polite”</code> で基本行うようにして、緊急性の高いものは <code>assertive</code> や <code>role=“alert”</code> などで通知するようにしましょう。</p>
 <h2>期待するアプローチ</h2>
-<p><img src="../images/04/image_001.jpeg" alt="Microsoft公式サイトからの「Internet Explorer 11 は Internet Explorer の最後のバージョンですか？」セクションの引用"></p>
+<p><img src="images/04/image_001.jpeg" alt="Microsoft公式サイトからの「Internet Explorer 11 は Internet Explorer の最後のバージョンですか？」セクションの引用"></p>
 <p>2021 年ウェブ界隈で大きなニュースでもあった Internet Explorer 11 のサポート終了の発表があり、今後はレガシーブラウザの考慮が減り先進的なウェブ標準による開発機運が高まってきました。</p>
 <h3>HTML による UI 実装の限界</h3>
-<p><img src="../images/04/image_002.jpeg" alt="ブラウザはドキュメントビュワー"></p>
+<p><img src="images/04/image_002.jpeg" alt="ブラウザはドキュメントビュワー"></p>
 <p>ところで先進的なウェブ開発をするにあたり一旦立ち止まって考えてみてほしいことがあります。ブラウザはあくまでもドキュメントビュワーのものであるということです。</p>
-<p><img src="../images/04/image_003.jpeg" alt="ハイパーテキストとしてのHTML"></p>
+<p><img src="images/04/image_003.jpeg" alt="ハイパーテキストとしてのHTML"></p>
 <p>ポートフォリオサイトやコーポレイトサイト、あるいはサーバーサイドと連携した販売サイトなど。インターネットを通じてそれらの文書を見ることができるようになっています。</p>
 <p>CSS で色付けされたり JavaScript で動的にすることで印象が離れがちですが、ハイパーテキストシステムのコンテンツのために HTML は存在しています。</p>
-<p><img src="../images/04/image_004.jpeg" alt="GUI としての HTML ？"></p>
+<p><img src="images/04/image_004.jpeg" alt="GUI としての HTML ？"></p>
 <p>それでは HTML は GUI のための機能を備えていると思えますでしょうか。</p>
 <p>HTML5 へ進化した中でインタラクションや表現も豊かになりましたが、アプリケーションのものとして使えるパーツとしてはまだ不十分、満たせていないと思います。</p>
 <p>多くは CSS や JavaScript と組み合わせてあたかも存在しているような UI と錯覚してるにすぎません。</p>
-<p><img src="../images/04/image_005.jpeg" alt="「HTML だけで UI を作る限界、あるいは無理なくユースケースと向き合っていくためには」発表タイトルのスライド"></p>
+<p><img src="images/04/image_005.jpeg" alt="「HTML だけで UI を作る限界、あるいは無理なくユースケースと向き合っていくためには」発表タイトルのスライド"></p>
 <p>以前私は「HTML だけで UI を作る限界」と題した、ユーザの要求が変化していく中、その複雑さを受け入れるアプリケーションをつくるために、今ある HTML を使い続けるのは限界があるのではないか、といった内容を発表しました</p>
 <p>そんな中で私がまさに、という期待しうるアプローチが今年になって発表されていました。</p>
 <h3>React GUI</h3>
-<p><img src="../images/04/image_006.jpeg" alt="React GUI"></p>
+<p><img src="images/04/image_006.jpeg" alt="React GUI"></p>
 <p><a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener">Normalize.css</a> 作者でもある <a href="https://nicolasgallagher.com/" target="_blank" rel="noopener">Nicolas</a> により発表された React GUI です。</p>
 <p>これは何かというと、もともとネイティブアプリケーション用に使われている React Native を GUI パーツそのものとして Web ブラウザ側でも使えるようにもってこれるようにしたライブラリになります。</p>
 <p>HTML の UI パーツから実装を考えるのではなく、アプリケーションのものとして使われる GUI をもとに実装をしていくというアプローチです。</p>
 <p>React GUI をプロダクションコードで使用している例はまだ見つけられてませんが、前身でもある <a href="https://necolas.github.io/react-native-web/" target="_blank" rel="noopener">React Native for Web</a> は Web 版の Twitter で使用されています。</p>
 <h3>デザインシステムからのアプローチ</h3>
 <p>次は <strong>「デザインシステム」</strong> という考え方から着想を得た２つのアプローチについて紹介します。</p>
-<p><img src="../images/04/image_007.jpeg" alt="Headless UI"></p>
+<p><img src="images/04/image_007.jpeg" alt="Headless UI"></p>
 <p>１つは Headless UI です。</p>
 <p>これはスタイルを考慮していないコンポーネントでざっくりというと挙動のみが提供されているものです。スタイルは <a href="https://tailwindcss.com/" target="_blank" rel="noopener">TailwindCSS</a> など別に付与することができます。React.js と Vue3 向けに提供されています。</p>
-<p><img src="../images/04/image_008.jpeg" alt="React Aria"></p>
+<p><img src="images/04/image_008.jpeg" alt="React Aria"></p>
 <p>もう１つは React Aria です。</p>
 <p>Adobe が開発するデザインシステムの <a href="https://react-spectrum.adobe.com/react-spectrum/" target="_blank" rel="noopener">React Spectrum</a> で、UI としての挙動やアクセシビリティ実装を React Hooks で分離して管理できるようになっています。こちらは React.js のみの対応になっています。</p>
 <p>これらのアプローチに共通することは JavaScript に振る舞いを集約させていることです。</p>
@@ -372,7 +372,7 @@ let className = classNames(
 <p>こうした JavaScript から振る舞いを定義していくことはネイティブでは足りなかったユースケースを創造していくことにもつながります。</p>
 <h3>WebComponents と AOM</h3>
 <p>HTML にはなかったものをつくる、という観点では Web Components の要素でもある <a href="https://developer.mozilla.org/ja/docs/Web/Web_Components/Using_custom_elements" target="_blank" rel="noopener">Custom Elements</a> も挙げられます。</p>
-<p><img src="../images/04/image_009.jpeg" alt=""></p>
+<p><img src="images/04/image_009.jpeg" alt=""></p>
 <p>JavaScript を用いて読み込ませることで、たとえば <code>&lt;toggle-button&gt;</code> という HTML 上には存在しない Custom Elements を存在させることができます。</p>
 <p>実装としてはコード例にあるとおりで <code>&lt;toggle-button&gt;</code> という要素を表示できるようになります。</p>
 <pre><code class="language-javascript">class ToggleButton extends HTMLElement {
@@ -400,7 +400,7 @@ customElements.define(&quot;toggle-button&quot;, ToggleButton);
   Default Button
 &lt;/button&gt;
 </code></pre>
-<p><img src="../images/04/image_010.jpeg" alt="Accessibility Object Model"></p>
+<p><img src="images/04/image_010.jpeg" alt="Accessibility Object Model"></p>
 <p>この欠点を解消する１つの手法として、アクセシビリティのためのユースケースとして開発されている <strong>Accessibility Object Model</strong>、通称 <strong>AOM</strong> という JavaScript API でのアプローチがあります。</p>
 <p>かつては属性値で設定する必要があったものが、IDL 属性に文字列や真偽値で挿入することができるようになります。</p>
 <p>つまりこれはアクセシビリティとしての関心事を DOM から分離して管理できるようになります。</p>
@@ -434,37 +434,37 @@ customElements.define(&quot;toggle-button&quot;, ToggleButton);
 <p>これは自分たちで Web 標準のものを生み出すようなストイックな手法で安易にオススメはできません。</p>
 <p>ですが、<a href="https://developer.mozilla.org/ja/docs/Web/Web_Components/Using_shadow_DOM" target="_blank" rel="noopener">Shadow DOM</a> にスタイルを内包させて、各種フロントエンドフレームワークとも合わせて使えるアプローチでもあります。</p>
 <hr>
-<p><img src="../images/04/image_011.jpeg" alt="制約があるため銀の弾丸ではない"></p>
+<p><img src="images/04/image_011.jpeg" alt="制約があるため銀の弾丸ではない"></p>
 <p>以上いくつかのアプローチを紹介させていただきましたが、これらのアプローチはプロダクトレディではなかったり、フレームワーク固定であったり、AOM はすべてのブラウザで安定して使用できるものでもないため、銀の弾丸となるものではないのは注意いただければと思います。</p>
-<p><img src="../images/04/image_012.jpeg" alt="状況やユースケースに合わせて活用できるように"></p>
+<p><img src="images/04/image_012.jpeg" alt="状況やユースケースに合わせて活用できるように"></p>
 <p>しかしながら、これまでのアクセシビリティを考慮するフロントエンド開発とは違って、責務を分割して柔軟に扱えるようにするアプローチであることは変わりないので、今後もこれらの動向を追いつつ、各開発状況やプロダクトのユースケースに合わせて活用できるようにしていきたいですね。</p>
 <h2>おわりに</h2>
-<p><img src="../images/05/image_001.jpeg" alt="アクセシビリティ対応"></p>
+<p><img src="images/05/image_001.jpeg" alt="アクセシビリティ対応"></p>
 <p>フロントエンド開発におけるこれまでとこれからのアクセシビリティ対応についてを紹介させてもらいました。最後に私から皆さんにアクセシビリティ対応をはじめられるヒントをお教えできればと思います。</p>
-<p><img src="../images/05/image_002.jpeg" alt="ウェブアクセシビリティの４原則"></p>
+<p><img src="images/05/image_002.jpeg" alt="ウェブアクセシビリティの４原則"></p>
 <p>W3C が提唱しているウェブアクセシビリティのガイドライン、通称 <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener">Web Content Accessibility Guidelines</a> において、ウェブアクセシビリティの４つの原則というものがあります。</p>
-<p><img src="../images/05/image_003.jpeg" alt="ウェブアクセシビリティの４原則、「知覚可能」、「操作可能」、「理解可能」、「堅牢」"></p>
+<p><img src="images/05/image_003.jpeg" alt="ウェブアクセシビリティの４原則、「知覚可能」、「操作可能」、「理解可能」、「堅牢」"></p>
 <p>その４原則とは <em>「知覚可能」</em>、 <em>「操作可能」</em>、 <em>「理解可能」</em>、そして <em>「堅牢」</em> であるというものです。</p>
-<p><img src="../images/05/image_004.jpeg" alt="「知覚可能」にフォーカスがあたる"></p>
+<p><img src="images/05/image_004.jpeg" alt="「知覚可能」にフォーカスがあたる"></p>
 <p>わたしはこの <em>「知覚可能」</em> という考え方が、アクセシビリティ対応をやる意義として分かりやすいものではないかなと思います。</p>
-<p><img src="../images/05/image_005.jpeg" alt="知覚できるようにする"></p>
+<p><img src="images/05/image_005.jpeg" alt="知覚できるようにする"></p>
 <p>知覚できるようにする、ということはどういうことでしょうか。</p>
-<p><img src="../images/05/image_006.jpeg" alt="触れるものをつくる"></p>
+<p><img src="images/05/image_006.jpeg" alt="触れるものをつくる"></p>
 <p>それは感覚器官を用いて触ることができるものをつくるということです。</p>
 <p>ブラウザ上からは視覚的に情報に触れ、聴覚で音に触れ、キーボードを通じて触覚において画面上の存在に触れることができます。</p>
-<p><img src="../images/05/image_007.jpeg" alt="触れるということはそこに何かがあると気付ける"></p>
+<p><img src="images/05/image_007.jpeg" alt="触れるということはそこに何かがあると気付ける"></p>
 <p>触れることができるということは即ちそこに何かがあるということに気付くことができます。</p>
-<p><img src="../images/05/image_008.jpeg" alt="手がかりを作ることがアクセシビリティ対応の一歩になる"></p>
+<p><img src="images/05/image_008.jpeg" alt="手がかりを作ることがアクセシビリティ対応の一歩になる"></p>
 <p>誰にでも問題なく動かせるものを作るというのは途方もなく大変なことです。</p>
 <p>ただ、そこに何かがあることに気づくことができる、ということができるだけでもアクセシビリティ対応の一歩になるのではないかと私は思います。</p>
-<p><img src="../images/05/image_009.jpeg" alt="０か１かの話じゃない"></p>
+<p><img src="images/05/image_009.jpeg" alt="０か１かの話じゃない"></p>
 <p>アクセシビリティについて真面目に取り組めば取り組むほど、０か１かの話じゃないことが分かってきます。人の数だけユースケースは増えていきます。</p>
 <p>どこかで達成した１００％ものが延々と残り続けることはないのです。</p>
-<p><img src="../images/05/image_010.jpeg" alt="触れるものを作っていこう"></p>
+<p><img src="images/05/image_010.jpeg" alt="触れるものを作っていこう"></p>
 <p>だからこそ、様々な人たちが触れるものを作っていき、</p>
-<p><img src="../images/05/image_011.jpeg" alt="アクセシブルなフロントエンド開発をやっていこう"></p>
+<p><img src="images/05/image_011.jpeg" alt="アクセシブルなフロントエンド開発をやっていこう"></p>
 <p>そして、私たちがつくるものにあらゆる人が参加できるようになるために、アクセシブルなフロントエンド開発をやっていきましょう。</p>
-<p><img src="../images/05/image_012.jpeg" alt="これまでもそしてこれからも"></p>
+<p><img src="images/05/image_012.jpeg" alt="これまでもそしてこれからも"></p>
 <p>これまでやってきた人も、そして、今日これからやっていく人も。</p>
 <h2>参考資料</h2>
 <ul>
