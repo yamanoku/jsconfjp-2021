@@ -8,10 +8,10 @@ exports.render = (data) => {
         <title>${data.title}</title>
         <meta name="og:title" content="${data.title}">
         <meta name="og:description" content="${data.description}">
-        <meta name="og:image" content="">
+        <meta name="og:image" content="https://yamanoku.net/jsconfjp-2021/images/top.jpeg">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@yamanoku">
-        <meta name="twitter:image:alt" content="">
+        <meta name="twitter:image:alt" content="${data.title}">
         <meta property="og:locale" content="${data.lang}">
         <link rel="stylesheet" href="https://cdn.skypack.dev/yama-normalize">
         <script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
