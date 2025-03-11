@@ -18,7 +18,7 @@
   "homepage": "https://github.com/yamanoku/document-page-template#readme",
   "dependencies": {
     "@11ty/eleventy": "3.0.0",
-    "budoux": "0.6.4",
+    "budoux": "0.7.0",
     "markdown-it": "14.1.0",
     "markdown-it-link-attributes": "4.0.1"
   },
