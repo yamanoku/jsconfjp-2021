@@ -19,7 +19,7 @@
   "dependencies": {
     "@11ty/eleventy": "3.1.2",
     "budoux": "0.7.0",
-    "markdown-it": "14.1.0",
+    "markdown-it": "14.1.1",
     "markdown-it-link-attributes": "4.0.1"
   },
   "devDependencies": {
