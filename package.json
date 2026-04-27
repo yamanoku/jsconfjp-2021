@@ -1,6 +1,6 @@
 {
-  "name": "document-page-template",
-  "description": "This article is about web accessibility support in Vue.js development.",
+  "name": "jsconfjp-2021",
+  "description": "JSConfJP 2021 登壇「アクセシブルなフロントエンド開発のこれまでとこれから」書き起こし記事",
   "scripts": {
     "build": "eleventy",
     "serve": "eleventy --serve",
